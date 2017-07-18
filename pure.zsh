@@ -24,7 +24,7 @@
 # \e[2K => clear everything on the current line
 
 PURER_PROMPT_COMMAND_COUNT=0
-STATUS_COLOR='cyan'
+STATUS_COLOR='blue'
 
 # turns seconds into human readable time
 # 165392 => 1d 21h 56m 32s
@@ -65,9 +65,9 @@ prompt_pure_clear_screen() {
 	prompt_pure_preprompt_render precmd
 }
 
-# set STATUS_COLOR: cyan for "insert", green for "normal" mode.
+# set STATUS_COLOR: blue for "insert", purple for "normal" mode.
 prompt_purer_vim_mode() {
-	STATUS_COLOR="${${KEYMAP/vicmd/green}/(main|viins)/cyan}"
+	STATUS_COLOR="${${KEYMAP/vicmd/57}/(main|viins)/blue}"
 	prompt_pure_preprompt_render
 }
 
@@ -133,7 +133,7 @@ prompt_pure_preprompt_render() {
     preprompt+=$'\n'
   fi
 
-	local symbol_color="%(?.${PURE_PROMPT_SYMBOL_COLOR:-magenta}.red)"
+	local symbol_color="%(?.${PURE_PROMPT_SYMBOL_COLOR:-green}.red)"
 
 	# begin with symbol, colored by previous command exit code
 	preprompt+="%F{$symbol_color}${PURE_PROMPT_SYMBOL:-❯}%f "
@@ -142,7 +142,7 @@ prompt_pure_preprompt_render() {
 	# git info
 	preprompt+="%F{$git_color}${vcs_info_msg_0_}${prompt_pure_git_dirty}%f"
 	# git pull/push arrows
-	preprompt+="%F{cyan}${prompt_pure_git_arrows}%f"
+	preprompt+="%F{blue}${prompt_pure_git_arrows}%f"
 	# username and machine if applicable
 	preprompt+=$prompt_pure_username
 	# execution time
