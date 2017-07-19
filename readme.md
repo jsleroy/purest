@@ -1,26 +1,28 @@
-# Purer
+# Purer[er?]
 
-> Pretty one-line ZSH prompt based on [@sindresorhus](https://github.)'s [Pure](https://github.com/sindresorhus/pure)
+> Pretty one-line ZSH prompt based on [@sindresorhus](https://github.)' [Pure](https://github.com/sindresorhus/pure) and [@DFurnes](https://github.)' [Purer](https://github.com/DFurnes/purer)
 
-![purer](https://cloud.githubusercontent.com/assets/583202/25418314/c3a29bfa-2a18-11e7-8a6f-4c0960ccadfc.png)
+![purer](screenshot.png)
+
+### Changes on top of Purer
+* Tweaked colours
+* More obvious colour change when in Vi mode
+* Removed newline between commands
+* Moved prompt symbol to end of prompt instead of beginning to make it more like `nicoulaj`
+
+### Changes on top of Pure (from Purer)
+* Vi Mode Indicator
+* Single line prompt
 
 ## Install
 
-Can be installed with `npm` or [manually](https://github.com/sindresorhus/pure/blob/master/readme.md#manually). Requires Git 2.0.0+ and ZSH 5.2+.
+#### Using [zplug](https://github.com/zplug/zplug):
 
-```sh
-$ npm install --global purer-prompt
+```zsh
+zplug "22a/purer"
 ```
 
-Initialize the prompt system (if not so already) and choose `pure`:
-
-```sh
-# .zshrc
-autoload -U promptinit; promptinit
-prompt purer
-```
-
-See [Pure's readme](https://github.com/sindresorhus/pure/blob/master/readme.md#install) for more detailed instructions.
+For any installation methods beyond this or more detailed instructions, check out [Pure's readme](https://github.com/sindresorhus/pure/blob/master/readme.md#install).
 
 ## Customization
 
@@ -32,5 +34,6 @@ Defines the prompt symbol color. The default value is `magenta`; you can use any
 
 ## License
 
+Purer[er?] MIT © [Peter Meehan](http://22a.io) <br/>
 Purer MIT © [David Furnes](http://dfurnes.com) <br/>
 Pure MIT © [Sindre Sorhus](http://sindresorhus.com)
