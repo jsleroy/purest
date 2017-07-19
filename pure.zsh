@@ -67,7 +67,7 @@ prompt_pure_clear_screen() {
 
 # set STATUS_COLOR: blue for "insert", purple for "normal" mode.
 prompt_purer_vim_mode() {
-	STATUS_COLOR="${${KEYMAP/vicmd/57}/(main|viins)/blue}"
+	STATUS_COLOR="${${KEYMAP/vicmd/202}/(main|viins)/blue}"
 	prompt_pure_preprompt_render
 }
 
@@ -130,13 +130,12 @@ prompt_pure_preprompt_render() {
 	# add a newline between commands
   FIRST_COMMAND_THRESHOLD=1
   if [[ "$PURER_PROMPT_COMMAND_COUNT" -gt "$FIRST_COMMAND_THRESHOLD" ]]; then
-    preprompt+=$'\n'
+    # preprompt+=$'\n'
+    preprompt+=$''
   fi
 
 	local symbol_color="%(?.${PURE_PROMPT_SYMBOL_COLOR:-green}.red)"
 
-	# begin with symbol, colored by previous command exit code
-	preprompt+="%F{$symbol_color}${PURE_PROMPT_SYMBOL:-❯}%f "
 	# directory, colored by vim status
 	preprompt+="%B%F{$STATUS_COLOR}%c%f%b"
 	# git info
@@ -147,6 +146,11 @@ prompt_pure_preprompt_render() {
 	preprompt+=$prompt_pure_username
 	# execution time
 	preprompt+="%B%F{242}${prompt_pure_cmd_exec_time}%f%b"
+
+	preprompt+=" "
+
+	# end with symbol, colored by previous command exit code
+	preprompt+="%F{$symbol_color}${PURE_PROMPT_SYMBOL:-❯}%f"
 
 	preprompt+=" "
 
