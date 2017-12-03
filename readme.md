@@ -1,8 +1,8 @@
-# Purer[er?]
+# Purest
 
 > Pretty one-line ZSH prompt based on [@sindresorhus](https://github.)' [Pure](https://github.com/sindresorhus/pure) and [@DFurnes](https://github.)' [Purer](https://github.com/DFurnes/purer)
 
-![purer](screenshot.png)
+![purest](screenshot.png)
 
 ### Changes on top of Purer
 * Tweaked colours
@@ -19,7 +19,7 @@
 #### Using [zplug](https://github.com/zplug/zplug):
 
 ```zsh
-zplug "22a/purer"
+zplug "22a/purest"
 ```
 
 For any installation methods beyond this or more detailed instructions, check out [Pure's readme](https://github.com/sindresorhus/pure/blob/master/readme.md#install).
@@ -34,6 +34,6 @@ Defines the prompt symbol color. The default value is `magenta`; you can use any
 
 ## License
 
-Purer[er?] MIT © [Peter Meehan](http://22a.io) <br/>
+Purest MIT © [Peter Meehan](http://22a.io) <br/>
 Purer MIT © [David Furnes](http://dfurnes.com) <br/>
 Pure MIT © [Sindre Sorhus](http://sindresorhus.com)
