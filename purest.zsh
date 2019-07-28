@@ -380,6 +380,9 @@ prompt_pure_setup() {
   # show username@host if root, with username in white
   [[ $UID -eq 0 ]] && prompt_pure_username=' %F{white}%n%f%F{242}@%m%f'
 
+  # show hostname override if it exists
+  [[ "$PURER_HOSTNAME_OVERRIDE" != '' ]] && prompt_pure_username=' %F{white}'"$PURER_HOSTNAME_OVERRIDE"
+
   # create prompt
   prompt_pure_preprompt_render 'precmd'
 }
