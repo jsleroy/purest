@@ -137,7 +137,7 @@ prompt_pure_preprompt_render() {
   local symbol_color="%(?.${PURE_PROMPT_SYMBOL_COLOR:-green}.red)"
 
   # directory, colored by vim status
-  preprompt+="%B%F{$STATUS_COLOR}%c%f%b"
+  preprompt+="%B%F{$STATUS_COLOR}${PUREST_PATH_EXPANSION:-%c}%f%b"
   # git info
   preprompt+="%F{$git_color}${vcs_info_msg_0_}${prompt_pure_git_dirty}%f"
   # git pull/push arrows
